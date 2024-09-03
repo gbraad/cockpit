@@ -161,7 +161,7 @@ jobs:
         with:
           script: require('fs').writeFileSync("package.json", ${{ toJSON(needs.start.outputs.package_json) }});
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: npm-install-results
           path: artifact
